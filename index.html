@@ -1,0 +1,67 @@
+<!-- Description
+ This HTML document creates a simple webpage with interactive elements that can be hidden by clicking buttons.
+ Each button has a data-target attribute that specifies which element to hide when clicked.
+ Uses jQuery to manage click events. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide</title>
+    <script src="D:\VScode\node_modules\jquery\dist\jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+        $(".hidde_btn").click(function(){
+            const hideevent = $(this).data("target");
+            $(hideevent).hide();
+            $(this).hide();
+
+        })
+       })
+    </script>
+</head>
+
+<body>
+    <div>
+        <div>
+            <img src="penguin.jpeg" alt="pemguin image" width="100px"><br><br>
+            <button class="hidde_btn" data-target="img">Hide element</button>
+        </div>
+        <div>
+            <p>Penguins are seabirds in the family Spheniscidae. <br>They use their wings to swim underwater,<br> 
+                but they cannot fly in the air. <br>They eat fish and other seafood. Penguins lay <br>their eggs and 
+                raise their babies on land.</p>
+            <button class="hidde_btn" data-target="p">Hide para</button>
+        </div>
+        <div class="form">
+            <h4>CLASS FORM</h4>
+              <form>
+                Name:<input type="text"><br><br>
+                Age : <input type="text">
+              </form><br>
+              <button class="hidde_btn" data-target=".form">Hide class</button>
+        </div>
+        <div id="table">
+            <h4>ID TABLE</h4>
+            <table border="1">
+                <tr>
+                    <td>Apple</td><td>150</td>
+                </tr>
+                <tr>
+                    <td>Orange</td><td>100</td>
+                </tr>
+                <tr>
+                    <td>Pineapple</td><td>200</td>
+                </tr>
+            </table><br>
+            <button class="hidde_btn" data-target="#table">Hide id</button>
+
+        </div>
+       
+       
+       
+        
+    </div>
+</body>
+</html>
